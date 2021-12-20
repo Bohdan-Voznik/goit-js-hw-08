@@ -18,8 +18,6 @@ new SimpleLightbox('.gallery a', {
 });
 
 function createGalatyItem({preview, original, description}) {
-    const item = document.createElement('li');
-  
     const link = document.createElement('a');
     link.classList.add('gallery__item');
     link.href = original;
@@ -30,9 +28,8 @@ function createGalatyItem({preview, original, description}) {
     img.classList.add('gallery__image');
 
     link.append(img);
-    item.append(link);
 
-    return item;
+    return link;
 }
 
 
